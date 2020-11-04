@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>App</title>
+    <link rel="stylesheet" href="normalize.css">
+    <!-- development version, includes helpful console warnings -->
+    
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 2% 5%
+      }
+    </style>
+
+
+</head>
+  <body>
+    <div id="app">
+      <h1>Home</h1>
+      <h2>Subheading</h2>
+      {{message}}
+      <hr />
+      <button @click="buttonClick">Click me</button>
+      <hr />
+      <a href="/about">about</a>
+    </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Vue'
+        },
+        mounted () {
+          console.log('Vue has mounted')
+        },
+        methods: {
+          buttonClick() {
+            alert("this button was clicked")
+          }
+        },
+      })
+      </script>
+  </body>
+</html>
